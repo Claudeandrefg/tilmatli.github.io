@@ -10,33 +10,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Quattrocento:wght@400;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
-  <!-- HEADER / NAV -->
+  <!-- ================= HEADER ================= -->
   <header class="site-header">
     <div class="nav-container">
-      <div class="logo">
-        <!-- Reemplazar por SVG optimizado -->
-        <span>TILMATLI</span>
-      </div>
+
+      <div class="logo">TILMATLI</div>
 
       <nav class="main-nav">
         <a href="#gama">Gama Digital</a>
-        <a href="#instrucciones">Instrucciones</a>
-        <a href="faq.html">FAQ</a>
-        <a href="distribuidores.html">Distribuidores</a>
+        <a href="#familias">Familias</a>
+        <a href="#contacto">Contacto</a>
       </nav>
 
-      <button class="menu-toggle" aria-label="Abrir menú">
-        ☰
-      </button>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- ================= HERO ================= -->
   <section class="hero">
     <div class="hero-content">
       <h1>TILMATLI</h1>
@@ -48,6 +43,69 @@
     </div>
   </section>
 
-  <!-- INTRO GAMAS -->
+  <!-- ================= INTRO ================= -->
   <section class="intro-gama">
-    <div c
+    <div class="container">
+      <p>
+        Descubre una gama profesional diseñada para equilibrio, profundidad
+        y expresión cromática contemporánea.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= FAMILIAS ================= -->
+  <section id="familias" class="familias-nav">
+    <div class="familias-scroll">
+      <button class="familia active">NAT</button>
+      <button class="familia">ARG</button>
+      <button class="familia">ORO</button>
+      <button class="familia">CHO</button>
+      <button class="familia">COB</button>
+      <button class="familia">MAT</button>
+    </div>
+  </section>
+
+  <!-- ================= GAMA ================= -->
+  <section id="gama" class="gama-grid">
+    <div class="container grid">
+
+      <article class="tono">
+        <div class="tono-img"></div>
+        <h3>1.00 – Negro</h3>
+        <p>Base neutral profunda.</p>
+      </article>
+
+      <article class="tono">
+        <div class="tono-img"></div>
+        <h3>3.0 – Castaño Oscuro</h3>
+      </article>
+
+      <article class="tono">
+        <div class="tono-img"></div>
+        <h3>4.0 – Castaño Medio</h3>
+      </article>
+
+      <article class="tono">
+        <div class="tono-img"></div>
+        <h3>5.0 – Castaño Claro</h3>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section id="contacto" class="contacto">
+    <div class="container">
+      <p>
+        Para información comercial y distribución, contáctanos.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <p>TILMATLI © 2026</p>
+  </footer>
+
+</body>
+</html>
