@@ -1,6 +1,4 @@
-/* =========================
-   VARIABLES DE MARCA
-   ========================= */
+/* ================= VARIABLES ================= */
 :root {
   --verde-profundo: #17584c;
   --verde-claro: #8cb0bc;
@@ -10,13 +8,15 @@
   --texto: #1a1a1a;
 }
 
-/* =========================
-   RESET BÁSICO
-   ========================= */
+/* ================= RESET ================= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,13 +26,11 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   HEADER / NAV
-   ========================= */
+/* ================= HEADER ================= */
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.95);
   backdrop-filter: blur(8px);
   z-index: 10;
 }
@@ -42,8 +40,8 @@ body {
   margin: auto;
   padding: 16px 24px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -63,28 +61,19 @@ body {
   font-family: 'Quattrocento', serif;
 }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-}
-
-/* =========================
-   HERO
-   ========================= */
+/* ================= HERO ================= */
 .hero {
   min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background:
-    linear-gradient(135deg,
-      var(--verde-profundo),
-      var(--verde-claro),
-      var(--crema)
-    );
   text-align: center;
+  background: linear-gradient(
+    135deg,
+    var(--verde-profundo),
+    var(--verde-claro),
+    var(--crema)
+  );
   padding: 40px;
 }
 
@@ -96,7 +85,6 @@ body {
 
 .hero h2 {
   font-family: 'Quattrocento', serif;
-  font-weight: 400;
   color: var(--blanco);
   margin: 16px 0 40px;
 }
@@ -105,6 +93,7 @@ body {
   font-weight: 700;
 }
 
+/* ================= BOTÓN ================= */
 .btn-primary {
   display: inline-block;
   padding: 14px 32px;
@@ -120,9 +109,7 @@ body {
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
-/* =========================
-   SECCIONES
-   ========================= */
+/* ================= SECCIONES ================= */
 .container {
   max-width: 1200px;
   margin: auto;
@@ -135,7 +122,6 @@ body {
 }
 
 .familias-nav {
-  background: var(--blanco);
   border-bottom: 1px solid #eee;
 }
 
@@ -147,8 +133,8 @@ body {
 }
 
 .familia {
-  background: none;
   border: 1px solid var(--verde-profundo);
+  background: none;
   padding: 8px 16px;
   cursor: pointer;
   font-family: 'Quattrocento', serif;
@@ -159,9 +145,11 @@ body {
   color: white;
 }
 
-/* =========================
-   GRID TONOS
-   ========================= */
+/* ================= GAMA ================= */
+#gama {
+  scroll-margin-top: 100px;
+}
+
 .gama-grid .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -173,31 +161,20 @@ body {
 }
 
 .tono-img {
-  width: 100%;
   height: 200px;
   background: var(--beige);
   margin-bottom: 16px;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* ================= CONTACTO ================= */
+.contacto {
+  background: var(--crema);
+  text-align: center;
+}
+
+/* ================= FOOTER ================= */
 .site-footer {
   padding: 24px;
   text-align: center;
   font-size: 14px;
-  background: var(--blanco);
-}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-@media (max-width: 768px) {
-  .main-nav {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
 }
