@@ -1,6 +1,6 @@
 /* =====================================================
-   RESET Y BASE
-   ===================================================== */
+RESET Y BASE
+===================================================== */
 
 * {
   box-sizing: border-box;
@@ -14,20 +14,20 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
   color: #1a1a1a;
   background-color: #ffffff;
+  line-height: 1.6;
 }
 
 /* =====================================================
-   HEADER / NAVEGACIÓN
-   ===================================================== */
+HEADER / NAVEGACIÓN
+===================================================== */
 
 header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid #e5e5e5;
 }
@@ -36,7 +36,6 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px 24px;
-
   display: flex;
   align-items: center;
   gap: 24px;
@@ -53,8 +52,8 @@ nav a {
 }
 
 /* =====================================================
-   HERO
-   ===================================================== */
+HERO
+===================================================== */
 
 .hero {
   min-height: 90vh;
@@ -70,15 +69,18 @@ nav a {
 .hero h1 {
   font-size: 56px;
   margin-bottom: 12px;
+  color: #ffffff;
 }
 
 .hero h2 {
   font-size: 20px;
   font-weight: normal;
   margin-bottom: 32px;
+  color: #ffffff;
 }
 
-/* CTA PRINCIPAL */
+/* CTA */
+
 .cta {
   display: inline-block;
   padding: 12px 28px;
@@ -86,117 +88,110 @@ nav a {
   color: #000000;
   text-decoration: none;
   font-size: 14px;
-  border: 1px solid #000;
+  border: 1px solid #000000;
 }
 
 /* =====================================================
-   SECCIONES GENERALES
-   ===================================================== */
-
-section {
-  padding: 80px 24px;
-}
-
-section > div,
-section > article {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* =====================================================
-   SECCIÓN INTRODUCTORIA
-   ===================================================== */
+SECCIÓN INTRODUCTORIA
+===================================================== */
 
 #intro {
   background-color: #fafafa;
+  padding: 100px 24px;
 }
 
-#intro p {
+.intro-box {
   max-width: 800px;
-  margin: 0 auto 24px;
+  margin: 0 auto;
   text-align: center;
 }
 
+.intro-box p {
+  margin-bottom: 24px;
+}
+
 /* =====================================================
-   SECCIÓN GAMA / FAMILIAS
-   ===================================================== */
+SECCIÓN GAMA / FAMILIAS
+===================================================== */
 
 #gama {
-  background-color: #ffffff;
+  padding: 120px 24px;
 }
 
 /* Cada familia */
+
 .familia {
+  max-width: 1200px;
+  margin: 0 auto 140px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 48px;
-  margin-bottom: 120px;
 }
 
-/* Portada de familia */
-.familia img {
+/* Portada familia */
+
+.familia-portada img {
   width: 100%;
-  height: auto;
   display: block;
 }
 
-/* Texto familia */
-.familia h3 {
+/* Información familia */
+
+.familia-info h3 {
   font-size: 22px;
   margin-bottom: 8px;
 }
 
-.familia p {
-  margin-bottom: 24px;
+.familia-info p {
+  margin-bottom: 32px;
 }
 
 /* Grid de tonos */
+
 .tonos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 20px;
 }
 
-/* Cada tono */
-.tonos div {
+.tono {
   text-align: center;
   font-size: 13px;
 }
 
-.tonos img {
+.tono img {
   width: 100%;
-  height: auto;
   margin-bottom: 8px;
 }
 
 /* =====================================================
-   LLAMADO A ACCIÓN SECUNDARIO
-   ===================================================== */
+CTA SECUNDARIO
+===================================================== */
 
-section:last-of-type {
+.cta-secundario {
   background-color: #f5f5f5;
   text-align: center;
+  padding: 100px 24px;
 }
 
-section:last-of-type p {
+.cta-secundario p {
   margin-bottom: 24px;
 }
 
 /* =====================================================
-   FOOTER
-   ===================================================== */
+FOOTER
+===================================================== */
 
 footer {
   padding: 40px 24px;
   text-align: center;
   font-size: 13px;
-  background-color: #ffffff;
   border-top: 1px solid #e5e5e5;
 }
 
 /* =====================================================
-   RESPONSIVE
-   ===================================================== */
+RESPONSIVE
+===================================================== */
 
 @media (max-width: 900px) {
   .familia {
