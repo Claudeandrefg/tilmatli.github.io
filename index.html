@@ -5,23 +5,8 @@
   <title>TILMATLI – Mystiq Garden</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!--
-    CSS provisional solo para visualizar secciones.
-    Esto se reemplazará por estilos finales.
-  -->
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; line-height: 1.6; }
-    header { position: sticky; top: 0; background: rgba(255,255,255,0.9); border-bottom: 1px solid #ddd; }
-    nav { display: flex; gap: 20px; padding: 16px; align-items: center; }
-    nav img { height: 40px; }
-    section { padding: 80px 40px; border-bottom: 1px solid #eee; }
-    .hero { min-height: 90vh; color: white; background: #333; display: flex; align-items: center; }
-    .hero-content { max-width: 600px; }
-    .cta { display: inline-block; margin-top: 20px; padding: 12px 24px; background: white; color: black; text-decoration: none; }
-    .familia { margin-top: 60px; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
-    .tonos { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px,1fr)); gap: 20px; }
-    footer { padding: 40px; text-align: center; background: #f5f5f5; }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -34,7 +19,7 @@ HEADER / NAVEGACIÓN
     <!-- LOGO -->
     <img src="assets/img/LogoHead.png" alt="TILMATLI Logo">
 
-    <!-- MENÚ PRINCIPAL -->
+    <!-- MENÚ -->
     <a href="#gama">Gama Digital</a>
     <a href="#instrucciones">Instrucciones</a>
     <a href="faq.html">Preguntas Frecuentes</a>
@@ -54,7 +39,6 @@ HERO PRINCIPAL
     <h1>TILMATLI</h1>
     <h2>La nueva colección de MYSTIQ GARDEN</h2>
 
-    <!-- CTA PRINCIPAL -->
     <a class="cta" href="assets/pdf/GamaDigital.pdf" download>
       Descargar Gama Digital
     </a>
@@ -65,8 +49,7 @@ HERO PRINCIPAL
 SECCIÓN INTRODUCTORIA
 ===================================================== -->
 <section id="intro">
-  <div>
-    <!-- TEXTO EDITABLE -->
+  <div class="intro-box">
     <p>
       Descubre una gama profesional diseñada para lograr equilibrio,
       profundidad y expresión cromática contemporánea.
@@ -74,84 +57,4 @@ SECCIÓN INTRODUCTORIA
 
     <p>
       Tilmatli es un tinte profesional de larga duración con alta concentración
-      de pigmentos para resultados intensos y brillantes. Fórmula con agentes
-      acondicionantes que protegen la fibra capilar durante el proceso de coloración.
-    </p>
-
-    <p>
-      Sistema de coloración permanente de larga duración con pigmentos de alta
-      concentración para resultados intensos, brillantes y agentes acondicionantes
-      que protegen la fibra capilar durante el proceso de coloración.
-    </p>
-
-    <!--
-      Animación futura:
-      fade-in cuando el bloque entra en viewport
-    -->
-  </div>
-</section>
-
-<!-- =====================================================
-SECCIÓN GAMA / FAMILIAS
-===================================================== -->
-<section id="gama">
-
-  <!-- =========================
-       FAMILIA: NAT – NATURALES
-       ========================= -->
-  <article class="familia" id="NAT">
-    <!-- COLUMNA IZQUIERDA -->
-    <div>
-      <!-- Portada de la familia -->
-      <img src="assets/img/familias/NAT.png" alt="Familia Naturales" style="width:100%;">
-    </div>
-
-    <!-- COLUMNA DERECHA -->
-    <div>
-      <h3>NAT – Naturales</h3>
-      <p>Base neutral para equilibrio entre tonos cálidos y fríos.</p>
-
-      <!-- LISTA DE TONOS -->
-      <div class="tonos">
-        <!-- TONO -->
-        <div>
-          <img src="assets/img/mechones/mechon_100.png" alt="1.00 Negro" style="width:100%;">
-          <strong>1.00</strong><br>Negro
-        </div>
-
-        <div>
-          <img src="assets/img/mechones/mechon_300.png" alt="3.0 Castaño Oscuro" style="width:100%;">
-          <strong>3.0</strong><br>Castaño Oscuro
-        </div>
-
-        <!-- Repetir estructura por tono -->
-      </div>
-    </div>
-  </article>
-
-  <!-- =================================================
-       REPLICAR ESTE BLOQUE PARA CADA FAMILIA
-       ARG / ORO / CHO / X-CO / COB / ROB / RUB / MAT
-       ================================================= -->
-
-</section>
-
-<!-- =====================================================
-LLAMADO A ACCIÓN SECUNDARIO
-===================================================== -->
-<section>
-  <p>Consulta la gama completa en formato digital.</p>
-  <a class="cta" href="assets/pdf/GamaDigital.pdf" download>
-    Descargar Gama Digital
-  </a>
-</section>
-
-<!-- =====================================================
-FOOTER
-===================================================== -->
-<footer>
-  <p>TILMATLI © 2026</p>
-</footer>
-
-</body>
-</html>
+      de pigmentos para resultados intensos y brillantes. Fórmula
