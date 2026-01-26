@@ -1,111 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
   <title>TILMATLI – Mystiq Garden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Quattrocento:wght@400;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <!--
+    CSS provisional solo para visualizar secciones.
+    Esto se reemplazará por estilos finales.
+  -->
+  <link rel="stylesheet" href="styles.css">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
-  <header class="site-header">
-    <div class="nav-container">
+<!-- =====================================================
+HEADER / NAVEGACIÓN
+===================================================== -->
+<header>
+  <nav>
+    <!-- LOGO -->
+    <img src="assets/img/LogoHead.png" alt="TILMATLI Logo">
 
-      <div class="logo">TILMATLI</div>
+    <!-- MENÚ PRINCIPAL -->
+    <a href="#gama">Gama Digital</a>
+    <a href="#instrucciones">Instrucciones</a>
+    <a href="faq.html">Preguntas Frecuentes</a>
+    <a href="distribuidores.html">Distribuidores</a>
+  </nav>
+</header>
 
-      <nav class="main-nav">
-        <a href="#gama">Gama Digital</a>
-        <a href="#familias">Familias</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+<!-- =====================================================
+HERO PRINCIPAL
+===================================================== -->
+<section class="hero" style="
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url('assets/img/portada_gamadigital.png') center / cover no-repeat;
+">
+  <div class="hero-content">
+    <h1>TILMATLI</h1>
+    <h2>La nueva colección de MYSTIQ GARDEN</h2>
 
+    <!-- CTA PRINCIPAL -->
+    <a class="cta" href="assets/pdf/GamaDigital.pdf" download>
+      Descargar Gama Digital
+    </a>
+  </div>
+</section>
+
+<!-- =====================================================
+SECCIÓN INTRODUCTORIA
+===================================================== -->
+<section id="intro">
+  <div>
+    <!-- TEXTO EDITABLE -->
+    <p>
+      Descubre una gama profesional diseñada para lograr equilibrio,
+      profundidad y expresión cromática contemporánea.
+    </p>
+
+    <p>
+      Tilmatli es un tinte profesional de larga duración con alta concentración
+      de pigmentos para resultados intensos y brillantes. Fórmula con agentes
+      acondicionantes que protegen la fibra capilar durante el proceso de coloración.
+    </p>
+
+    <p>
+      Sistema de coloración permanente de larga duración con pigmentos de alta
+      concentración para resultados intensos, brillantes y agentes acondicionantes
+      que protegen la fibra capilar durante el proceso de coloración.
+    </p>
+
+    <!--
+      Animación futura:
+      fade-in cuando el bloque entra en viewport
+    -->
+  </div>
+</section>
+
+<!-- =====================================================
+SECCIÓN GAMA / FAMILIAS
+===================================================== -->
+<section id="gama">
+
+  <!-- =========================
+       FAMILIA: NAT – NATURALES
+       ========================= -->
+  <article class="familia" id="NAT">
+    <!-- COLUMNA IZQUIERDA -->
+    <div>
+      <!-- Portada de la familia -->
+      <img src="assets/img/familias/NAT.png" alt="Familia Naturales" style="width:100%;">
     </div>
-  </header>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>TILMATLI</h1>
-      <h2>La nueva colección de <span>MYSTIQ GARDEN</span></h2>
+    <!-- COLUMNA DERECHA -->
+    <div>
+      <h3>NAT – Naturales</h3>
+      <p>Base neutral para equilibrio entre tonos cálidos y fríos.</p>
 
-      <a href="assets/pdf/gama-digital.pdf" class="btn-primary">
-        Descargar Gama Digital
-      </a>
+      <!-- LISTA DE TONOS -->
+      <div class="tonos">
+        <!-- TONO -->
+        <div>
+          <img src="assets/img/mechones/mechon_100.png" alt="1.00 Negro" style="width:100%;">
+          <strong>1.00</strong><br>Negro
+        </div>
+
+        <div>
+          <img src="assets/img/mechones/mechon_300.png" alt="3.0 Castaño Oscuro" style="width:100%;">
+          <strong>3.0</strong><br>Castaño Oscuro
+        </div>
+
+        <!-- Repetir estructura por tono -->
+      </div>
     </div>
-  </section>
+  </article>
 
-  <!-- ================= INTRO ================= -->
-  <section class="intro-gama">
-    <div class="container">
-      <p>
-        Descubre una gama profesional diseñada para equilibrio, profundidad
-        y expresión cromática contemporánea.
-      </p>
-    </div>
-  </section>
+  <!-- =================================================
+       REPLICAR ESTE BLOQUE PARA CADA FAMILIA
+       ARG / ORO / CHO / X-CO / COB / ROB / RUB / MAT
+       ================================================= -->
 
-  <!-- ================= FAMILIAS ================= -->
-  <section id="familias" class="familias-nav">
-    <div class="familias-scroll">
-      <button class="familia active">NAT</button>
-      <button class="familia">ARG</button>
-      <button class="familia">ORO</button>
-      <button class="familia">CHO</button>
-      <button class="familia">COB</button>
-      <button class="familia">MAT</button>
-    </div>
-  </section>
+</section>
 
-  <!-- ================= GAMA ================= -->
-  <section id="gama" class="gama-grid">
-    <div class="container grid">
+<!-- =====================================================
+LLAMADO A ACCIÓN SECUNDARIO
+===================================================== -->
+<section>
+  <p>Consulta la gama completa en formato digital.</p>
+  <a class="cta" href="assets/pdf/GamaDigital.pdf" download>
+    Descargar Gama Digital
+  </a>
+</section>
 
-      <article class="tono">
-        <div class="tono-img"></div>
-        <h3>1.00 – Negro</h3>
-        <p>Base neutral profunda.</p>
-      </article>
-
-      <article class="tono">
-        <div class="tono-img"></div>
-        <h3>3.0 – Castaño Oscuro</h3>
-      </article>
-
-      <article class="tono">
-        <div class="tono-img"></div>
-        <h3>4.0 – Castaño Medio</h3>
-      </article>
-
-      <article class="tono">
-        <div class="tono-img"></div>
-        <h3>5.0 – Castaño Claro</h3>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ================= CONTACTO ================= -->
-  <section id="contacto" class="contacto">
-    <div class="container">
-      <p>
-        Para información comercial y distribución, contáctanos.
-      </p>
-    </div>
-  </section>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <p>TILMATLI © 2026</p>
-  </footer>
+<!-- =====================================================
+FOOTER
+===================================================== -->
+<footer>
+  <p>TILMATLI © 2026</p>
+</footer>
 
 </body>
 </html>
