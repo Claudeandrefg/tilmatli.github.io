@@ -1,204 +1,191 @@
-/* =====================================================
-RESET Y BASE
-===================================================== */
-
+/* ================= RESET BASE ================= */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #1c1c1c;
   line-height: 1.6;
 }
 
-/* =====================================================
-HEADER / NAVEGACIÓN
-===================================================== */
-
-header {
+/* ================= HEADER ================= */
+.site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid #e5e5e5;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #eee;
 }
 
-nav {
+.header-inner {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px 24px;
+  margin: auto;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
-  gap: 24px;
+  justify-content: space-between;
 }
 
-nav img {
-  height: 40px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #1a1a1a;
-  font-size: 14px;
-}
-
-/* =====================================================
-HERO
-===================================================== */
-
-.hero {
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  padding: 80px 24px;
-}
-
-.hero-content {
-  max-width: 600px;
-}
-
-.hero h1 {
-  font-size: 56px;
-  margin-bottom: 12px;
-  color: #ffffff;
-}
-
-.hero h2 {
-  font-size: 20px;
-  font-weight: normal;
-  margin-bottom: 32px;
-  color: #ffffff;
-}
-
-/* CTA */
-
-.cta {
-  display: inline-block;
-  padding: 12px 28px;
-  background: #ffffff;
-  color: #000000;
-  text-decoration: none;
-  font-size: 14px;
-  border: 1px solid #000000;
-}
-
-/* =====================================================
-SECCIÓN INTRODUCTORIA
-===================================================== */
-
-#intro {
-  background-color: #fafafa;
-  padding: 100px 24px;
-}
-
-.intro-box {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.intro-box p {
-  margin-bottom: 24px;
-}
-
-/* =====================================================
-SECCIÓN GAMA / FAMILIAS
-===================================================== */
-
-#gama {
-  padding: 120px 24px;
-}
-
-/* Cada familia */
-
-.familia {
-  max-width: 1200px;
-  margin: 0 auto 140px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 48px;
-}
-
-/* Portada familia */
-
-.familia-portada img {
-  width: 100%;
+/* LOGO CONTROLADO */
+.logo img {
+  max-height: 42px;      /* <<< AQUÍ controlas el tamaño */
+  width: auto;
   display: block;
 }
 
-/* Información familia */
+/* NAV */
+.main-nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #1c1c1c;
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  background: url("assets/img/portada_gamadigital.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.55)
+  );
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  letter-spacing: 0.35em;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+/* ================= BOTONES ================= */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.btn-secondary {
+  border-color: #1c1c1c;
+  color: #1c1c1c;
+}
+
+/* ================= INTRO ================= */
+.intro {
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-box {
+  max-width: 760px;
+  text-align: center;
+}
+
+.intro-lead {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ================= CATALOGO ================= */
+.catalogo {
+  padding: 4rem 2rem;
+}
+
+.familia {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.familia-cover img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
 
 .familia-info h3 {
-  font-size: 22px;
-  margin-bottom: 8px;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
 }
 
-.familia-info p {
-  margin-bottom: 32px;
+.familia-desc {
+  margin-bottom: 2rem;
 }
 
-/* Grid de tonos */
-
-.tonos {
+/* TONOS */
+.tonos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 20px;
+  gap: 1.5rem;
 }
 
 .tono {
   text-align: center;
-  font-size: 13px;
+  font-size: 0.75rem;
 }
 
 .tono img {
   width: 100%;
-  margin-bottom: 8px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
 }
 
-/* =====================================================
-CTA SECUNDARIO
-===================================================== */
+/* ================= PLACEHOLDER IMAGEN ================= */
+/* Si la imagen no existe → mantiene espacio blanco */
+img {
+  background-color: #ffffff;
+}
 
-.cta-secundario {
-  background-color: #f5f5f5;
+.tono img,
+.familia-cover img {
+  border: 1px solid #e6e6e6;
+}
+
+/* ================= CTA FINAL ================= */
+.cta-final {
   text-align: center;
-  padding: 100px 24px;
+  padding: 4rem 2rem;
+  border-top: 1px solid #eee;
 }
 
-.cta-secundario p {
-  margin-bottom: 24px;
-}
-
-/* =====================================================
-FOOTER
-===================================================== */
-
-footer {
-  padding: 40px 24px;
+/* ================= FOOTER ================= */
+.site-footer {
+  padding: 2rem;
   text-align: center;
-  font-size: 13px;
-  border-top: 1px solid #e5e5e5;
-}
-
-/* =====================================================
-RESPONSIVE
-===================================================== */
-
-@media (max-width: 900px) {
-  .familia {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    flex-wrap: wrap;
-  }
+  font-size: 0.75rem;
+  color: #777;
 }
