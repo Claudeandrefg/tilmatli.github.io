@@ -1,14 +1,7 @@
-/* ================= VARIABLES ================= */
-:root {
-  --verde-profundo: #17584c;
-  --verde-claro: #8cb0bc;
-  --crema: #fae8de;
-  --beige: #e1cab5;
-  --blanco: #ffffff;
-  --texto: #1a1a1a;
-}
+/* =====================================================
+   RESET Y BASE
+   ===================================================== */
 
-/* ================= RESET ================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,161 +13,197 @@ html {
 }
 
 body {
-  font-family: 'Lora', serif;
-  color: var(--texto);
-  background: var(--blanco);
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+  color: #1a1a1a;
+  background-color: #ffffff;
 }
 
-/* ================= HEADER ================= */
-.site-header {
+/* =====================================================
+   HEADER / NAVEGACIÓN
+   ===================================================== */
+
+header {
   position: sticky;
   top: 0;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(8px);
-  z-index: 10;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e5e5e5;
 }
 
-.nav-container {
+nav {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 16px 24px;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  font-family: 'Cinzel', serif;
-  font-size: 20px;
-  letter-spacing: 2px;
-}
-
-.main-nav {
-  display: flex;
   gap: 24px;
 }
 
-.main-nav a {
-  text-decoration: none;
-  color: var(--texto);
-  font-family: 'Quattrocento', serif;
+nav img {
+  height: 40px;
 }
 
-/* ================= HERO ================= */
+nav a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
 .hero {
   min-height: 90vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(
-    135deg,
-    var(--verde-profundo),
-    var(--verde-claro),
-    var(--crema)
-  );
-  padding: 40px;
+  padding: 80px 24px;
+}
+
+.hero-content {
+  max-width: 600px;
 }
 
 .hero h1 {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(42px, 6vw, 72px);
-  color: var(--blanco);
+  font-size: 56px;
+  margin-bottom: 12px;
 }
 
 .hero h2 {
-  font-family: 'Quattrocento', serif;
-  color: var(--blanco);
-  margin: 16px 0 40px;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 32px;
 }
 
-.hero h2 span {
-  font-weight: 700;
-}
-
-/* ================= BOTÓN ================= */
-.btn-primary {
+/* CTA PRINCIPAL */
+.cta {
   display: inline-block;
-  padding: 14px 32px;
-  background: var(--blanco);
-  color: var(--verde-profundo);
+  padding: 12px 28px;
+  background: #ffffff;
+  color: #000000;
   text-decoration: none;
-  font-family: 'Quattrocento', serif;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
-
-/* ================= SECCIONES ================= */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 64px 24px;
-}
-
-.intro-gama {
-  background: var(--crema);
-  text-align: center;
-}
-
-.familias-nav {
-  border-bottom: 1px solid #eee;
-}
-
-.familias-scroll {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  padding: 16px 24px;
-}
-
-.familia {
-  border: 1px solid var(--verde-profundo);
-  background: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-family: 'Quattrocento', serif;
-}
-
-.familia.active {
-  background: var(--verde-profundo);
-  color: white;
-}
-
-/* ================= GAMA ================= */
-#gama {
-  scroll-margin-top: 100px;
-}
-
-.gama-grid .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 32px;
-}
-
-.tono {
-  text-align: center;
-}
-
-.tono-img {
-  height: 200px;
-  background: var(--beige);
-  margin-bottom: 16px;
-}
-
-/* ================= CONTACTO ================= */
-.contacto {
-  background: var(--crema);
-  text-align: center;
-}
-
-/* ================= FOOTER ================= */
-.site-footer {
-  padding: 24px;
-  text-align: center;
   font-size: 14px;
+  border: 1px solid #000;
+}
+
+/* =====================================================
+   SECCIONES GENERALES
+   ===================================================== */
+
+section {
+  padding: 80px 24px;
+}
+
+section > div,
+section > article {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   SECCIÓN INTRODUCTORIA
+   ===================================================== */
+
+#intro {
+  background-color: #fafafa;
+}
+
+#intro p {
+  max-width: 800px;
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+/* =====================================================
+   SECCIÓN GAMA / FAMILIAS
+   ===================================================== */
+
+#gama {
+  background-color: #ffffff;
+}
+
+/* Cada familia */
+.familia {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+  margin-bottom: 120px;
+}
+
+/* Portada de familia */
+.familia img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Texto familia */
+.familia h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.familia p {
+  margin-bottom: 24px;
+}
+
+/* Grid de tonos */
+.tonos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+/* Cada tono */
+.tonos div {
+  text-align: center;
+  font-size: 13px;
+}
+
+.tonos img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+/* =====================================================
+   LLAMADO A ACCIÓN SECUNDARIO
+   ===================================================== */
+
+section:last-of-type {
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+section:last-of-type p {
+  margin-bottom: 24px;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+  padding: 40px 24px;
+  text-align: center;
+  font-size: 13px;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+  .familia {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
 }
