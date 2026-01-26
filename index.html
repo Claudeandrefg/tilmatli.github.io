@@ -2,59 +2,103 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>TILMATLI – Mystiq Garden</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tilmatli – Mystiq Garden</title>
 
-  <!-- CSS -->
+  <!-- CSS principal -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- =====================================================
-HEADER / NAVEGACIÓN
-===================================================== -->
-<header>
-  <nav>
-    <!-- LOGO -->
-    <img src="assets/img/LogoHead.png" alt="TILMATLI Logo">
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-inner">
 
-    <!-- MENÚ -->
-    <a href="#gama">Gama Digital</a>
-    <a href="#instrucciones">Instrucciones</a>
-    <a href="faq.html">Preguntas Frecuentes</a>
-    <a href="distribuidores.html">Distribuidores</a>
-  </nav>
+    <div class="logo">
+      <img src="assets/img/logo_tilmatli.png" alt="Tilmatli">
+    </div>
+
+    <nav class="main-nav">
+      <a href="#catalogo">Gama Digital</a>
+      <a href="#instrucciones">Instrucciones</a>
+      <a href="preguntas.html">Preguntas Frecuentes</a>
+      <a href="distribuidores.html">Distribuidores</a>
+    </nav>
+
+  </div>
 </header>
 
-<!-- =====================================================
-HERO PRINCIPAL
-===================================================== -->
-<section class="hero" style="
-  background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-    url('assets/img/portada_gamadigital.png') center / cover no-repeat;
-">
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+
   <div class="hero-content">
     <h1>TILMATLI</h1>
     <h2>La nueva colección de MYSTIQ GARDEN</h2>
 
-    <a class="cta" href="assets/pdf/GamaDigital.pdf" download>
+    <a class="btn-primary" href="assets/pdf/GamaDigital.pdf" download>
       Descargar Gama Digital
     </a>
   </div>
 </section>
 
-<!-- =====================================================
-SECCIÓN INTRODUCTORIA
-===================================================== -->
-<section id="intro">
+<!-- ================= INTRO ================= -->
+<section class="intro">
   <div class="intro-box">
-    <p>
+    <p class="intro-lead">
       Descubre una gama profesional diseñada para lograr equilibrio,
       profundidad y expresión cromática contemporánea.
     </p>
 
     <p>
       Tilmatli es un tinte profesional de larga duración con alta concentración
-      de pigmentos para resultados intensos y brillantes. Fórmula
+      de pigmentos para resultados intensos y brillantes. Fórmula con agentes
+      acondicionantes que protegen la fibra capilar durante el proceso de coloración.
+    </p>
+
+    <p>
+      Sistema de coloración permanente de larga duración con pigmentos de alta
+      concentración para resultados intensos, brillantes y agentes acondicionantes
+      que protegen la fibra capilar durante el proceso de coloración.
+    </p>
+  </div>
+</section>
+
+<!-- ================= CATALOGO ================= -->
+<section id="catalogo" class="catalogo">
+
+  <!-- ===== FAMILIA NAT ===== -->
+  <article class="familia">
+    <div class="familia-cover">
+      <img src="assets/img/familias/NAT.png" alt="Familia Naturales">
+    </div>
+
+    <div class="familia-info">
+      <h3>NAT – Naturales</h3>
+      <p class="familia-desc">
+        Base neutral para equilibrio entre tonos cálidos y fríos.
+      </p>
+
+      <div class="tonos-grid">
+        <div class="tono">
+          <img src="assets/img/mechones/mechon_100.png" alt="1.00 Negro">
+          <span>1.00 – Negro</span>
+        </div>
+
+        <div class="tono">
+          <img src="assets/img/mechones/mechon_300.png" alt="3.0 Castaño Oscuro">
+          <span>3.0 – Castaño Oscuro</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+<!-- ================= CTA FINAL ================= -->
+<section class="cta-final">
+  <p>Consulta la gama completa en formato digital.</p>
+
+  <a class="btn-secondary" href="assets/pdf/GamaDigital.pdf" download>
+    De
