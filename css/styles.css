@@ -239,11 +239,15 @@ h2, h3 { font-family: var(--font-sub); }
    4. QUOTE STRIP
    ========================================= */
 .quotes-strip {
-  background: var(--color-light);
-  padding: var(--space-md) 0;
-  overflow-x: auto;
-  justify-content: center;
+    width: 100%;             /* El fondo se expande a todo lo ancho */
+    background-color: var(--c-nude); /* Usamos el color #fae8de de tu paleta */
+    padding: 80px 0;         /* Espacio arriba y abajo de la franja */
+    display: flex;
+    justify-content: center; /* Centra el contenedor interno */
+    border-top: 1px solid var(--c-arena);
+    border-bottom: 1px solid var(--c-arena);
 }
+
 
 /* Contenedor horizontal */
 .quotes-track {
