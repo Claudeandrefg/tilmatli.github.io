@@ -128,3 +128,102 @@ h2, h3 { font-family: var(--font-sub); }
         font-size: 0.8rem;
     }
 }
+/* =========================================
+   2. PORTADA Y BOTON DESCARGAR (HERO)
+   ========================================= */
+/* =========================================
+   3. HERO SECTION (Estilo Editorial)
+   ========================================= */
+.hero {
+    position: relative;
+    height: 90vh; /* Ocupa casi toda la pantalla */
+    display: flex;
+    align-items: flex-end; /* Manda el contenido al fondo */
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 0; /* Asegura que empiece desde arriba */
+}
+
+/* Imagen de fondo */
+.hero-bg {
+    position: absolute;
+    inset: 0;      /* Atajo para top:0, right:0, bottom:0, left:0 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Degradado blanco */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    /* Truco visual: Empieza transparente y termina en blanco sólido 
+       para unirse con la siguiente sección */
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.00) 0%,
+        rgba(255,255,255,0.15) 30%,
+        rgba(255,255,255,0.45) 55%,
+        rgba(255,255,255,0.85) 80%,
+        var(--c-blanco) 100%
+    );
+}
+
+/* Contenido (Texto y Botón) */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 820px;
+    padding: 0 24px 80px; /* Separación inferior generosa */
+    width: 100%;
+}
+
+/* Título principal con ajuste responsive */
+.hero h1 {
+    font-family: var(--font-titulo);
+    font-size: clamp(3rem, 8vw, 64px); /* Se achica en móvil, máx 64px */
+    letter-spacing: clamp(2px, 1vw, 8px);
+    margin-bottom: 12px;
+    color: var(--c-verde); /* Tu verde #17584c */
+    line-height: 1.1;
+}
+
+/* Subtítulo */
+.hero h2 {
+    font-family: var(--font-sub);
+    font-size: clamp(1rem, 2vw, 18px);
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--c-verde); /* Usamos el verde pero quizás con opacidad si prefieres */
+    opacity: 0.8;
+}
+
+/* Botón estilo 'Ghost' con fondo claro */
+.btn-primary {
+    display: inline-block;
+    margin-top: 36px;
+    padding: 14px 34px;
+
+    background: rgba(255,255,255,0.95);
+    color: var(--c-verde);
+
+    font-family: var(--font-sub);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    border: 1px solid var(--c-arena); /* Borde color arena elegante */
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--c-verde);
+    color: var(--c-blanco);
+    border-color: var(--c-verde);
+    transform: translateY(-3px); /* Pequeña elevación */
+}
