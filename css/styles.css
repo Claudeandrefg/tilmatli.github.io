@@ -134,21 +134,28 @@ h2, h3 { font-family: var(--font-sub); }
    ========================================= */
 .hero {
     position: relative;
-    height: 90vh; /* Ocupa casi toda la pantalla */
+    height: 90vh;
     display: flex;
-    align-items: flex-end; /* Manda el contenido al fondo */
+    align-items: flex-end;
     justify-content: center;
     overflow: hidden;
-    margin-top: 0; /* Asegura que empiece desde arriba */
+    
+    /* --- EL TRUCO ESTÁ AQUÍ --- */
+    max-width: 2000px;      /* Evita que crezca más allá de una resolución razonable */
+    margin: 0 auto;         /* Centra el Hero si la pantalla es más ancha que 2000px */
+    background-color: var(--c-blanco); /* El color que se verá en los bordes laterales */
 }
 
-/* Imagen de fondo */
 .hero-bg {
     position: absolute;
-    inset: 0;      /* Atajo para top:0, right:0, bottom:0, left:0 */
+    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    
+    /* Cambiamos 'cover' por una lógica más controlada si quieres evitar zoom */
+    object-fit: cover; 
+    object-position: center top; /* Asegura que la cara o el logo de la foto no se corten */
+    
     z-index: 0;
 }
 
