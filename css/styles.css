@@ -235,3 +235,43 @@ h2, h3 { font-family: var(--font-sub); }
     border-color: var(--c-verde);
     transform: translateY(-3px); /* Pequeña elevación */
 }
+/* =========================================
+   4. QUOTE STRIP
+   ========================================= */
+.quotes-strip {
+  background: var(--color-light);
+  padding: var(--space-md) 0;
+  overflow-x: auto;
+}
+
+/* Contenedor horizontal */
+.quotes-track {
+  display: flex;
+  gap: 64px;
+  padding: 0 var(--space-lg);
+  min-width: max-content;
+}
+
+/* Cada cita */
+.quote-item {
+  max-width: 420px;
+  flex-shrink: 0;
+}
+
+/* Texto de la cita */
+.quote-text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+/* Autor / fuente */
+.quote-author {
+  font-family: var(--font-subtitle);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+}
