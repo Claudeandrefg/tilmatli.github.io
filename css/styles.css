@@ -242,14 +242,16 @@ h2, h3 { font-family: var(--font-sub); }
   background: var(--color-light);
   padding: var(--space-md) 0;
   overflow-x: auto;
+  justify-content: center;
 }
 
 /* Contenedor horizontal */
 .quotes-track {
   display: flex;
   gap: 64px;
-  padding: 0 var(--space-lg);
+  padding: 0 var(--space-lg);  
   min-width: max-content;
+
 }
 
 /* Cada cita */
